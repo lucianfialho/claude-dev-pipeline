@@ -16,15 +16,37 @@ audit trail, and blocking gates on commit/PR.
 
 ## What ships
 
-Five skills, each in two formats:
+15 skills organized in four families, each in two formats:
+
+**Orchestration**
 
 | Skill | Purpose |
 |---|---|
 | `solve-issue` | Orchestrate reading a GitHub issue → implementing → testing → opening a PR |
+| `batch-issues` | Process multiple issues in parallel via agent teams |
+| `context-sync` | Update `.metadata/` knowledge base per directory |
+
+**Specialists** (invoked by `solve-issue` for domain-specific implementation)
+
+| Skill | Purpose |
+|---|---|
+| `backend-dev` | API, database, auth, server logic |
+| `frontend-dev` | React/Next.js components, a11y, responsive |
+| `qa-engineer` | Tests, edge cases, coverage |
+| `ux-designer` | UX heuristics, accessibility, interaction |
+| `code-reviewer` | Bugs, security, performance, quality review |
+
+**Review**
+
+| Skill | Purpose |
+|---|---|
 | `review-pr` | Review a PR with specialist passes (frontend, backend, security, UX) |
+| `batch-review` | Run all applicable specialists in parallel with unified verdict |
 | `validate-issue` | Verify a PR implementation covers every requirement from the linked issue |
 | `check-security` | Focused security review — OWASP Top 10, secrets, auth, dependencies |
 | `suggest-tests` | Analyze a diff and suggest missing tests, edge cases, regression risks |
+| `ux-review` | UX-focused review — Nielsen heuristics, WCAG 2.1 AA |
+| `pr-summary` | Generate structured PR summary — what changed, why, impact |
 
 Each skill lives at `skills/<name>/` with:
 
@@ -188,10 +210,12 @@ reference:
 
 ## Status
 
-**v0.1.0** — MVP with 5 skills. The `skill.yaml` files are the raw
-output of the converter; refinement is a follow-up. More skills from
-the original dev-pipeline corpus (`backend-dev`, `frontend-dev`,
-`qa-engineer`, `ux-designer`, etc) will land in future releases.
+**v0.2.0** — Full 15-skill corpus resurrected from the legacy
+dev-pipeline, each shipped as prose + generated state-machine
+skeleton. All 15 `skill.yaml` files pass atomic-gates' schema
+validation out of the box. Refinement (per-state `output_schema`,
+pruning meta-sections, adding `when` transitions) is incremental
+follow-up work — prioritized by the skills that get used most.
 
 ---
 
