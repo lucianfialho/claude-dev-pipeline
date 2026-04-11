@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "backend-dev/implement output",
+  "description": "Shared shape with frontend-dev so orchestrators (solve-issue) can interpolate {{output.implementation.*}} uniformly regardless of which specialist ran.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["implementation"],
+  "properties": {
+    "implementation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "files_touched", "tests_passed"],
+      "properties": {
+        "summary": { "type": "string", "minLength": 1 },
+        "files_touched": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "tests_run": { "type": "string" },
+        "tests_passed": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

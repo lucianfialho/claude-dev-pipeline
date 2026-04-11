@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "solve-issue/fetch_issue output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["issue"],
+  "properties": {
+    "issue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["number", "title", "body"],
+      "properties": {
+        "number": { "type": "integer" },
+        "title": { "type": "string", "minLength": 1 },
+        "body": { "type": "string" },
+        "labels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "comments": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

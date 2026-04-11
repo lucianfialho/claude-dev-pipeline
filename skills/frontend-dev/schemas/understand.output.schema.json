@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "frontend-dev/understand output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["plan"],
+  "properties": {
+    "plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["components_to_change", "new_behavior", "tests_needed"],
+      "properties": {
+        "components_to_change": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "new_behavior": { "type": "string", "minLength": 1 },
+        "accessibility_considerations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "tests_needed": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

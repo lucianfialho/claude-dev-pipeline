@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "solve-issue/review output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verdict", "summary"],
+  "properties": {
+    "verdict": {
+      "type": "string",
+      "enum": ["APPROVE", "REQUEST_CHANGES"]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blocking_issues": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

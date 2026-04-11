@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "backend-dev/understand output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["plan"],
+  "properties": {
+    "plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files_to_change", "new_behavior", "tests_needed"],
+      "properties": {
+        "files_to_change": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "new_behavior": { "type": "string", "minLength": 1 },
+        "tests_needed": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

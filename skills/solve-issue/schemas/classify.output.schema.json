@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "solve-issue/classify output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["specialist", "reasoning"],
+  "properties": {
+    "specialist": {
+      "type": "string",
+      "enum": ["backend", "frontend"]
+    },
+    "reasoning": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

@@ -47,6 +47,9 @@ CONVERTER="$ATOMIC_GATES_ROOT/lib/import_skill.py"
 PROMOTED=(
   validate-issue
   review-pr
+  solve-issue
+  backend-dev
+  frontend-dev
 )
 
 FORCE_PROMOTED="${FORCE_PROMOTED:-}"
