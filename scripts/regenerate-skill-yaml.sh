@@ -30,7 +30,7 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # Default path to the atomic-gates checkout (used to find import_skill.py).
 # Override with ATOMIC_GATES_ROOT env var if your checkout lives elsewhere.
-ATOMIC_GATES_ROOT="${ATOMIC_GATES_ROOT:-$HOME/Code/claude-dev-pipeline}"
+ATOMIC_GATES_ROOT="${ATOMIC_GATES_ROOT:-$HOME/Code/atomic-gates}"
 CONVERTER="$ATOMIC_GATES_ROOT/lib/import_skill.py"
 
 if [[ ! -f "$CONVERTER" ]]; then
