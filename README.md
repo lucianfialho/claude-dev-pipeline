@@ -12,6 +12,12 @@ skills — prose, prompt-driven, no dependencies. Install it alongside
 same skills run through a state-machine runtime with schema validation,
 audit trail, and blocking gates on commit/PR.
 
+> ⚠️ **Status: experimental.** This corpus is part of an exploratory
+> implementation of Jesse Vincent's *[Rules and Gates](https://blog.fsck.com/2026/04/07/rules-and-gates/)*
+> thesis. See the [end-to-end dogfood run](https://github.com/lucianfialho/atomic-gates/blob/main/docs/dogfood/solve-issue-run.md)
+> in the atomic-gates repo for a full walk-through of the `solve-issue`
+> orchestrator pipeline using this corpus.
+
 ---
 
 ## What ships
