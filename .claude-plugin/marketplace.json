@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Dev-pipeline skill corpus for Claude Code. Prose skills (SKILL.md) + generated state machines (skill.yaml). Companion to lucianfialho/atomic-gates.",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "claude-dev-pipeline",
       "source": "./",
       "description": "A corpus of dev-workflow skills (solve-issue, review-pr, validate-issue, check-security, suggest-tests) shipped as SKILL.md prose + skill.yaml state machines generated via the atomic-gates converter. Pairs with atomic-gates >= 0.3.0 for schema-validated execution, audit trail, and blocking gates on commit/PR.",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "author": { "name": "Lucian Fialho" },
       "category": "productivity",
       "tags": ["dev-pipeline", "skills", "state-machine", "github", "automation"]
