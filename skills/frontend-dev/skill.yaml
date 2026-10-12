@@ -18,7 +18,7 @@ states:
   understand:
     description: Read the issue and produce a concrete component-level plan
     agent_prompt: |
-      Read GitHub issue #{{inputs.issue_number}} via `gh issue view`.
+      Read the issue: if `.factory/issue.json` exists in the working directory, read it (keys: number, identifier, title, body); otherwise read GitHub issue #{{inputs.issue_number}} via `gh issue view`.
       Produce a concrete implementation plan for the frontend work.
 
       Before writing code, decide:

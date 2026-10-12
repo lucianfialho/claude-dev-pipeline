@@ -67,6 +67,8 @@ The `skill.yaml` files are committed so users don't need to run anything
 after install, and so anyone reading the repo can see the mechanical
 output of the converter side-by-side with its prose source.
 
+Since 0.3.1, `solve-issue`, `backend-dev` and `frontend-dev` read `.factory/issue.json` when present (written by the factory's local Execute provider), so the issue can come from any tracker.
+
 ---
 
 ## Install

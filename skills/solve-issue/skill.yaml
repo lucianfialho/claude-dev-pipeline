@@ -20,9 +20,11 @@ states:
   fetch_issue:
     description: Pull the issue body, labels, and comments from GitHub
     agent_prompt: |
-      Use `gh issue view {{inputs.issue_number}} --json number,title,body,labels,comments`
-      to fetch the issue. Comments come as a structured array — extract
-      just the body text of each one into a flat list of strings.
+      If the file `.factory/issue.json` exists in the working directory, READ IT and use it as the
+      issue (keys: number, identifier, title, body, labels, comments, url). Do NOT call `gh` in that case.
+      Only if the file does not exist, use
+      `gh issue view {{inputs.issue_number}} --json number,title,body,labels,comments`.
+      Comments come as a structured array — extract just the body text of each one into a flat list of strings.
 
       Emit YAML at {{output_path}}:
         issue:
