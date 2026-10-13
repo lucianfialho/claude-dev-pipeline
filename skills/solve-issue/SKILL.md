@@ -240,6 +240,7 @@ Closes #<number>
 
 ## Summary
 <1-2 sentences: what this PR does and why>
+<if `.factory/context.md` existed in the worktree: "Contexto usado: N nós" where N is the count of `## ` node headings in that file; omit the line entirely when the file was absent>
 
 ## Domain
 <frontend | backend | full-stack | tests | infra | docs>

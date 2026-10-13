@@ -28,6 +28,7 @@ You are a senior backend developer. Your job is to implement server-side feature
   find . -path "*/.metadata/summary.md" | grep -vE "node_modules|\.git" | xargs -I{} cat {} 2>/dev/null
   ```
   If relevant metadata exists, read `.metadata/context.md` for those directories too.
+- Check for `.factory/context.md` at the repo root — when present, it lists the graph nodes (file:line, excerpt, and explanations) the factory already judged relevant to this issue. Read it before searching the codebase yourself; it often replaces several rounds of grep.
 - Check the existing API structure and database schema
 - Understand the data flow and dependencies
 
